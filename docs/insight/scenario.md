@@ -4,7 +4,8 @@
 
 传统的运营模式都是由人来审核稿件、手动截图、发表到QQ空间。
 
-![](assets/insight_scenario_01.jpg)
+
+<img src="assets/insight_scenario_02.jpg" alt="人工发表" width="40%" height="40%">
 
 ## 革新
 
