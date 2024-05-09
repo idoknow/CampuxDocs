@@ -12,3 +12,42 @@
 
 解决了 QQ 空间接口、QQ 消息处理等问题，辅以投稿用的前端，即可在其基础上实现自动化。
 
+### 用户注册
+
+用户向机器人发送任意消息，获取说明（可自定义）。
+
+<img src="assets/insight_scenario_03.jpg" alt="打招呼" width="30%" height="30%">
+
+用户发送 #注册账号 命令即可注册账号。
+
+<img src="assets/insight_scenario_04.jpg" alt="注册账号" width="30%" height="30%">
+
+### 投稿
+
+用户登录到前端投稿页面，填写内容、图片、是否匿名，提交即可。
+
+<img src="assets/insight_scenario_05.jpg" alt="投稿" width="30%" height="30%">
+
+### 审核
+
+#### Web 端审核
+
+<img src="assets/insight_scenario_07.jpg" alt="Web端审核" width="30%" height="30%">
+
+#### 群内审核
+
+Bot 端配置了群内审核后，管理员可以直接在群内审核。
+
+<img src="assets/insight_scenario_06.jpg" alt="群内审核" width="30%" height="30%">
+
+### 自动发表到空间说说
+
+管理员需要定期（约48小时）扫码登录 QQ 空间。
+
+<img src="assets/insight_scenario_08.jpg" alt="扫码登录" width="30%" height="30%">
+
+Cookies 有效时，审核通过的稿件，将由后端推入队列，由 Bot 渲染成图后自动发表到空间说说。
+
+<img src="assets/insight_scenario_09.jpg" alt="自动发表" width="30%" height="30%">
+
+<img src="assets/insight_scenario_10.jpg" alt="自动发表" width="30%" height="30%">
