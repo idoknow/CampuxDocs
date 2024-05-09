@@ -9,6 +9,7 @@
 - 了解如何配置 MongoDB 和 Redis
 - 了解如何配置 MinIO
 - 了解如何配置 Nginx 或 Caddy
+- 了解 JSON 和 YAML 语法
 
 ### 系统环境
 

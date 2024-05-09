@@ -237,3 +237,16 @@ Lagrange 连接配置示例：
 05-09 16:18:09 [INFO] nonebot | OneBot V11 | Bot 2297454588 connected
 05-09 16:18:09 [INFO] websockets | connection open
 ```
+
+### 多例部署
+
+按照上述步骤，再部署一个 CampuxBot 实例即可，记得修改`.env`文件中的`CAMPUX_QQ_BOT_UIN`和其他配置。  
+然后在 Campux 的 `data/campux.yaml` 中的 `service.bots` 中添加新的 QQ 号。
+    
+```yaml
+service:
+    bots:
+        - 123456789
+        - 987654321
+    token: <服务间通信的 Token>
+```

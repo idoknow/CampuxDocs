@@ -7,3 +7,8 @@
 * [私有化部署](deploy/)
     * [环境 & 外部组件](deploy/env)
     * [系统组件](deploy/campux)
+    * [对外提供服务](deploy/expose)
+* [行为和维护](usage/)
+    * [Campux 前后端和系统配置](usage/campux)
+    * [CampuxBot](usage/bot)
+    * [CampuxUtility](usage/utility)
