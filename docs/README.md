@@ -2,7 +2,11 @@
 
 校园墙自动化解决方案
 
-## 系统组件开源仓库链接
+## 社区
+
+- QQ 群：226427026（[链接](https://qm.qq.com/q/WstnOUijcu)）
+
+## 仓库链接
 
 - [Campux](https://github.com/idoknow/Campux) - 系统后端和前端，供用户访问的网页
 - [CampuxBot](https://github.com/idoknow/CampuxBot) - 机器人程序，管理 墙QQ号消息、QQ空间操作，用户通过此注册账号。
