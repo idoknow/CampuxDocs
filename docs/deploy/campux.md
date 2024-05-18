@@ -13,7 +13,8 @@ services:
   campux-backend:
     image: ghcr.io/idoknow/campux:main
     container_name: campux
-    restart: always
+    ports:
+      - 8080:8080
     volumes:
       - ./data:/app/data
     networks:
@@ -79,7 +80,7 @@ service:
 docker compose up -d
 ```
 
-访问 `http://<你的 IP>:8080` 即可看到 Campux 的前端页面，但是**强烈**建议你使用 Nginx 或 Caddy 反向代理签一个证书改成 HTTPS。
+访问 `http://<你的 IP>:8080` 即可看到 Campux 的前端页面，但是**强烈**建议你使用 Nginx 或 Caddy 反向代理签一个证书改成 HTTPS，详细请完成部署后查看`对外提供服务`页。
 
 ## CampuxUtility 系统工具
 
