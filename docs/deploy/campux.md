@@ -206,8 +206,8 @@ docker compose up -d
 ### 配置 QQ 逆向框架
 
 目前可以选用的逆向框架有很多。当前（2024-05-09）推荐使用 [Lagrange](https://github.com/LagrangeDev/Lagrange.Core)。  
-关于各个框架的选用，和配置方式，可以参考我们另外一个项目（QChatGPT）的文档：[部署消息平台](https://qchatgpt.rockchin.top/posts/deploy/platforms/)。  
-需要注意的是，CampuxBot 仅支持 OneBot 协议，且只支持反向 WS 连接。上述文档中，只可以选用 `go-cqhttp`、`Lagrange` 或 `其他兼容的平台->OneBot 11协议`。
+关于各个框架的选用，和配置方式，可以参考我们另外一个项目（QChatGPT）的文档：[部署消息平台](https://qchatgpt.rockchin.top/posts/deploy/platforms/aiocqhttp/)。  
+需要注意的是，CampuxBot 仅支持 OneBot 协议，且只支持反向 WS 连接。上述文档中，只可以选用 `aiocqhttp` 目录下的框架。
 
 #### 连接 CampuxBot
 
