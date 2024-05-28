@@ -58,8 +58,11 @@ mq:
         db: 0
         password: "<Redis 密码>"
         stream:
+            # 消息队列的名称
+            # 如果你多个Campux系统共用同一个Redis，这里的名称相同的key值每个系统要区分一下
             new_post: campux_new_post
             publish_post: campux_publish_post
+            post_cancel: campux_post_cancel
 oss:
     minio:
         access_key: <你的 MinIO Access Key>
@@ -154,7 +157,7 @@ networks:
 
 别急着启动，先在同目录新建一个`.env`文件，内容从 [.env.example](https://github.com/idoknow/CampuxBot/blob/main/.env.example) 复制一份贴进去，按照下面说明修改。
 
-以下仅为说明内容，不要把这里的内容复制到你的`.env`文件中，用不了的。
+以下仅为说明内容，不要把这里的内容带注释复制到你的`.env`文件中，用不了的。
 
 ```bash
 # OneBot 协议 反向WS 监听地址，一般不用改
@@ -174,8 +177,10 @@ CAMPUX_REDIS_HOST="redis"
 CAMPUX_REDIS_PORT=6379
 # Redis 密码
 CAMPUX_REDIS_PASSWORD=""
+# 这三个Stream也是一样，如果你多个Campux系统共用同一个Redis，这里要对应你的后端填写的Stream名称
 CAMPUX_REDIS_PUBLISH_POST_STREAM="campux_publish_post"
 CAMPUX_REDIS_NEW_POST_STREAM="campux_new_post"
+CAMPUX_REDIS_POST_CANCEL_STREAM="campux_post_cancel"
 # 用户发送非命令消息时回复的帮助信息，每用户每60秒只回复一次
 CAMPUX_HELP_MESSAGE="发送 #注册账号 以此QQ号注册一个新账号\n发送 #重置密码 重置你的账号密码\n\n投稿地址 https://xxxxxxx"
 # 群内审核命令不正确时回复的帮助信息
