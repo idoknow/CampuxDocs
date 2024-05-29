@@ -11,7 +11,7 @@
 ```yaml
 services:
   campux-backend:
-    image: ghcr.io/idoknow/campux:main
+    image: rockchin/campux:latest
     container_name: campux
     ports:
       - 8080:8080
@@ -94,7 +94,7 @@ docker compose up -d
 ```yaml
 services:
   campux-backend:
-    image: ghcr.io/idoknow/campuxutility:main
+    image: rockchin/campuxbot:latest
     container_name: campux-utility
     restart: always
     volumes:
@@ -137,7 +137,7 @@ CampuxBot 负责墙号的QQ消息处理和QQ空间操作。支持一系统多墙
 ```yaml
 services:
   campux-bot:
-    image: ghcr.io/idoknow/campuxbot:main
+    image: rockchin/campuxbot:latest
     container_name: campux-bot-<你的墙号QQ>
     restart: always
     volumes:

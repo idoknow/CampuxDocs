@@ -16,8 +16,8 @@
 
 - 已安装 Docker 和 Docker Compose
 - 仅支持 x86_64 架构 Linux
-- 主机必须能无障碍高速访问 ghcr.io（推荐香港、台湾、日本等地区的服务器）
-    - 测试方法：`docker pull ghcr.io/idoknow/campux:main`
+- 主机必须能正常拉取 docker hub 的镜像
+    - 测试方法：`docker pull rockchin/campux:latest`
 
 推荐在同一台宿主机上运行所有容器，若要如此做，请先创建一个专用网络：
 
