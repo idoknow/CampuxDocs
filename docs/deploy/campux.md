@@ -94,7 +94,7 @@ docker compose up -d
 ```yaml
 services:
   campux-backend:
-    image: rockchin/campuxbot:latest
+    image: rockchin/campuxutility:latest
     container_name: campux-utility
     restart: always
     volumes:
