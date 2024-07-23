@@ -187,6 +187,8 @@ CAMPUX_REDIS_PASSWORD=""
 CAMPUX_REDIS_PUBLISH_POST_STREAM="campux_publish_post"
 CAMPUX_REDIS_NEW_POST_STREAM="campux_new_post"
 CAMPUX_REDIS_POST_CANCEL_STREAM="campux_post_cancel"
+# Hash 表名称，跟stream的相似，需要与后端配置的一致
+CAMPUX_REDIS_POST_PUBLISH_STATUS_HASH="campux_post_publish_status"
 # 用户发送非命令消息时回复的帮助信息，每用户每60秒只回复一次
 CAMPUX_HELP_MESSAGE="发送 #注册账号 以此QQ号注册一个新账号\n发送 #重置密码 重置你的账号密码\n\n投稿地址 https://xxxxxxx"
 # 群内审核命令不正确时回复的帮助信息
