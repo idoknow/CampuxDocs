@@ -4,9 +4,14 @@
 
 传统的运营模式都是由人来审核稿件、手动截图、发表到QQ空间。
 
-<img src="assets/insight_scenario_01.jpg" alt="用户投稿" width="40%" height="40%">
+<img src="assets/insight_scenario_01.jpg" alt="用户投稿" width="20%" height="20%">
 
-<img src="assets/insight_scenario_02.jpg" alt="人工发表" width="40%" height="40%">
+<img src="assets/insight_scenario_02.jpg" alt="人工发表" width="20%" height="20%">
+
+## 为什么选择 Campux ？
+
+上述的全人工操作的校园墙运营，步骤繁多，容易出错，且效率低下，影响运营人员积极性。  
+使用 Campux 实现全过程自动化，运营人员一次部署，之后只需要点击按钮即可自动完成发表，以往需要团队完成的工作，现在只需要一个人即可胜任，可以将更多精力放在高质量内容和舆论管理上。
 
 ## 革新
 
