@@ -200,8 +200,6 @@ CAMPUX_REVIEW_QQ_GROUP_ID=123456789
 CAMPUX_QQ_GROUP_REVIEW=true
 # CampuxUtility 地址，如果 CampuxUtility 容器和此容器处于一个网络，这里的地址就是 http://campux-utility:8999/text2img
 CAMPUX_TEXT_TO_IMAGE_API="http://campux-utility:8999/text2img"
-# 发表稿件说说时额外的文本，例如：「本文由 Campux 机器人发布」
-CAMPUX_PUBLISH_TEXT_EXTRA=""
 # 发表稿件说说时的延迟，单位秒，0为不延迟。如果你有多个墙号，建议设置一个延迟，避免同时发表导致的带宽压力
 CAMPUX_PUBLISH_POST_TIME_DELAY=0
 
@@ -215,7 +213,27 @@ CAMPUX_QQ_ADMIN_UIN=12345678
 docker compose up -d
 ```
 
-启动实例
+启动实例后，CampuxBot 会在 data 目录下创建 `metadata.json` 文件，用于存储机器人的元数据。
+
+#### data/metadata.json
+
+- post_publish_text   发表说说到空间时，附带的文字，使用 Python 语法描述
+
+  - 默认为 `'#' + str(post_id)` 仅附带稿件 ID  
+  - 支持的变量: text 稿件文本, post_id 稿件ID, uin 发布者QQ号, post 稿件对象(可以在CampuxBot的代码 campux/common/entity.py 中看到其定义)
+  - 支持的函数: at(uin) 在文本中插入@某人, links() 提取文本中的链接并返回列表
+  - 示例：
+
+      ```json
+      {
+          "post_publish_text": "'#' + str(post_id) + ' ' + (at(uin) if not post.anon else '') + '\\n' + '\\n'.join(links())"
+      }
+
+      效果：
+      #<稿件 ID> <@发布者(如果是匿名则为空)>
+      <链接1>
+      <链接2>
+      ```
 
 ### 配置 QQ 逆向框架
 
