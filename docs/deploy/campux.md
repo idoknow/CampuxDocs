@@ -36,6 +36,7 @@ docker compose up
 ```yaml
 auth:
     jwt:
+        # 用户登录 Token 的有效期，单位秒
         expire: 21600
         secret: <你自定义的 JWT Token 密钥>
 backend:
@@ -63,12 +64,24 @@ mq:
             new_post: campux_new_post
             publish_post: campux_publish_post
             post_cancel: campux_post_cancel
+        prefix:
+            # key 前缀
+            # 如果你多个Campux系统共用同一个Redis，这里的名称相同的key值每个系统要区分一下
+            oauth2_code: campux_oauth2_code
         hash:
             # hash 表的名称
             # 如果你多个Campux系统共用同一个Redis，这里的名称相同的key值每个系统要区分一下
             # post_publish_status: 系统内多个bot发表一个稿件后，会在对应稿件的hash表中记录发表状态以供后端确认发表状态，这个value为hash表前缀
             #                      默认值为例，ID 为 1 的稿件，发表状态的hash表名为 campux_post_publish_status1
             post_publish_status: campux_post_publish_status
+oauth2:
+    server:
+        # OAuth 2.0 Access Token 的加密密钥
+        access_secret: 76f49aa2-4634-4696-81e0-e95fb202e9f3
+        # OAuth 2.0 Access Token 的有效期，单位秒
+        ak_expire: 1209600
+        # OAuth 2.0 授权码的加密密钥
+        code_secret: a5c6f609-e5bb-495a-a2b9-160f201049d8
 oss:
     minio:
         access_key: <你的 MinIO Access Key>
