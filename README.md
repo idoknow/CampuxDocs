@@ -1,3 +1,5 @@
+> 文档现已迁移至[主仓库 docs/](https://github.com/idoknow/Campux/tree/main/docs)，使用 VitePress 构建。
+
 # CampuxDocs
 
 Campux 文档仓库。基于 [Docsify](https://docsify.js.org/) 构建。  
